@@ -127,6 +127,21 @@ h3 {
     color: #222;
 }
 
+.game-label {
+  background-color: #CBF3F0;
+  border: 2px solid #222;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  box-shadow: 3px 3px 6px #222;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+
 @media (max-width: 900px) {
     nav > * {
         font-size: 1.8rem;
@@ -162,8 +177,8 @@ h3 {
 }
 
 .game-button {
-    background-color: #eee;
-    border: 2px solid #ccc;
+    background-color: #FFBF69;
+    border: 2px solid #FF9F1C;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
@@ -177,8 +192,8 @@ h3 {
 }
 
 .game-button:hover {
-    background-color: #FFBF69;
-    border-color: #FF9F1C;
+    background-color: #FF9F1C;
+    border-color: #FFBF69;
     transform: scale(1.05);
 }
 
