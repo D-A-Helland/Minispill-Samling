@@ -57,6 +57,25 @@ main {
     padding-bottom: 3rem;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 90vw;
+    gap: 1.5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+
+.flex-container > * {
+    flex: 1 1 250px; /* minimum 250px width, expands to fill */
+    min-height: 180px;
+    max-width: calc(25% - 1.5rem); /* roughly 4 per row on large screens */
+    box-sizing: border-box;
+}
+
 .item {
     display: flex;
     flex-direction: column;
@@ -96,8 +115,16 @@ h1 {
     width: 40rem;
 }
 
+h3 {
+    margin: 0.7rem;
+}
+
 .height-120px {
     grid-auto-rows: 150px !important;
+}
+
+.nav-current {
+    color: #222;
 }
 
 @media (max-width: 900px) {
@@ -132,5 +159,31 @@ h1 {
         width: 100vw;
         border-radius: 0;
     }
+}
+
+.game-button {
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 3rem;
+}
+
+.game-button:hover {
+    background-color: #FFBF69;
+    border-color: #FF9F1C;
+    transform: scale(1.05);
+}
+
+.game-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
 }
 
