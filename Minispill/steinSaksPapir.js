@@ -19,7 +19,14 @@ scissors.addEventListener("click", () => {
 
 const runGame = function(choice) {
     const options = ["🪨", "📄", "✂️"];
-    const computer = options[Math.floor(Math.random() * 3)];
+
+    // Pick a random choice from the array using a for loop instead of direct Math.random
+    let computer = "";
+    for (let i = 0; i < options.length; i++) {
+        const randomIndex = Math.floor(Math.random() * options.length);
+        computer = options[randomIndex];
+        break; // we only need one random choice, so break after assigning
+    }
 
     let result = "";
 
@@ -36,9 +43,8 @@ const runGame = function(choice) {
     }
 
     label.innerHTML = `
-        Computer:<br>
+        Du: ${choice}<br>
         PC: ${computer}<br>
-        ${result}
-    `;
+        ${result}`;
 };
 
