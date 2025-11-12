@@ -20,12 +20,11 @@ scissors.addEventListener("click", () => {
 const runGame = function(choice) {
     const options = ["🪨", "📄", "✂️"];
 
-    // Pick a random choice from the array using a for loop instead of direct Math.random
     let computer = "";
     for (let i = 0; i < options.length; i++) {
         const randomIndex = Math.floor(Math.random() * options.length);
         computer = options[randomIndex];
-        break; // we only need one random choice, so break after assigning
+        break; 
     }
 
     let result = "";
